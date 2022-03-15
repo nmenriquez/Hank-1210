@@ -1,0 +1,45 @@
+<h1>Angular Pipe</h1>
+
+<h2>Date Pipes</h2>
+<div>
+    Today's date : {{presentDate}}
+</div>
+<div>
+    Today's date : {{presentDate | date}}
+</div>
+
+<div>
+    This is a short date : {{presentDate | date:'shortDate'}}<br>
+    This is a full date : {{presentDate | date:'fullDate'}}<br>
+    This will show a formatted date : {{presentDate | date:'M/dd/yyyy'}}<br>
+    This indicates the hourse and minutes : {{presentDate | date:'h:mm'}}<br>
+
+</div>
+ <h2>
+     Chained Pipes
+ </h2>
+
+ This is a short date : {{presentDate | date:'medium' | uppercase}}<br>
+ This is a full date : {{presentDate | date:'fullDate' | lowercase}}<br>
+
+ <h1>Currency Pipes</h1>
+ <p>{{price | currency: '' : true }}</p>
+ <p>{{price | currency: 'USD'}}</p>
+ <p>{{price | currency: 'CAD'}}</p>
+ <p>{{price | currency: 'JPY'}}</p>
+ <p>{{price | currency: 'INR' : 'symbol' : '3.1-2'}}</p>
+
+ <div>
+     <h3>Start index :- {{Fruits | slice:2}}</h3>
+     <h4>Start and end index :-{{Fruits | slice:1:4}}</h4>
+     <h5>Negative index:- {{Fruits | slice:-2}}</h5>
+     <h6>Negative start and end index :- {{Fruits | slice:-4:-2}}</h6>
+ </div>
+
+ <div>
+    <div style="text-align: center">
+        <h3>Decimal Pipe</h3>
+        <p>{{decimalNum1 | number:'3.1'}}</p>
+        <p>{{decimalNum1 | number:'2.1-4'}}
+        </div>,
+ </div>
